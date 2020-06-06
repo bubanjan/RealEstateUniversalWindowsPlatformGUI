@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="FrontendRealEstate.AllView"   
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:FrontendRealEstate.Models"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <Style TargetType="TextBlock" x:Key="WrappedText">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <controls:DataGrid Name = "dataGrid" ItemsSource="{x:Bind dataS}" AutoGenerateColumns = "False" HorizontalAlignment="Left"
+                           Background="DeepSkyBlue" VerticalContentAlignment="Top" 
+                           AlternatingRowBackground = "DodgerBlue" Foreground="White" IsReadOnly="True"
+                           ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <controls:DataGrid.Columns>
+                <controls:DataGridTextColumn Header="ID" Binding="{Binding ID}" Width = "auto"/>
+                <controls:DataGridTextColumn Header="Type" Binding="{Binding TypeP}" Width = "auto"/>
+                <controls:DataGridTextColumn Header="Location" Binding="{Binding Location}" Width = "auto"/>
+                <controls:DataGridTextColumn Header="Description" Binding="{Binding Description}" Width = "400" ElementStyle="{StaticResource WrappedText}" />
+                <controls:DataGridTextColumn Header="Size m²" Binding="{Binding Size}" Width = "auto"/>
+                <controls:DataGridTextColumn Header="Price €" Binding="{Binding Price}" Width = "auto"/>
+            </controls:DataGrid.Columns>
+        </controls:DataGrid>
+
+    </Grid>
+
+
+</Page>
