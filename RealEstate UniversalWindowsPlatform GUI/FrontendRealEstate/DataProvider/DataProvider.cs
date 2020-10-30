@@ -13,7 +13,7 @@ namespace FrontendRealEstate.DataProvider
     {
         public async Task<List<Estate>> GetEstatesData()
         {
-            string URL = "https://realestatewebapinovakbubanja.azurewebsites.net/api/estates";
+            string URL = "https://realestatewebapinb.azurewebsites.net/api/estates";
             List<Estate> dataEstateList = new List<Estate>();
           
             using (HttpResponseMessage response = await APIHelper.ApiClient.GetAsync(URL))
@@ -37,7 +37,7 @@ namespace FrontendRealEstate.DataProvider
 
         public async Task<List<Estate>> SearhByPriceGet(int min, int max)
         {
-            string URL = $"https://realestatewebapinovakbubanja.azurewebsites.net/api/estates/{min}-{max}";
+            string URL = $"https://realestatewebapinb.azurewebsites.net/api/estates/{min}-{max}";
             List<Estate> dataEstateListSPrice = new List<Estate>();
 
             using (HttpResponseMessage response = await APIHelper.ApiClient.GetAsync(URL))
@@ -60,7 +60,7 @@ namespace FrontendRealEstate.DataProvider
 
         public async Task<List<Estate>> SearhBySizeGet(int min, int max)
         {
-            string URL = $"https://realestatewebapinovakbubanja.azurewebsites.net/api/estates/{min},{max}";
+            string URL = $"https://realestatewebapinb.azurewebsites.net/api/estates/{min},{max}";
             List<Estate> dataEstateListSPrice = new List<Estate>();
 
             using (HttpResponseMessage response = await APIHelper.ApiClient.GetAsync(URL))

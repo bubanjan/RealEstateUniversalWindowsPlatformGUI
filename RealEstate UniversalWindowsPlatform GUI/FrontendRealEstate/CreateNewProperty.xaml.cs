@@ -58,7 +58,7 @@ namespace FrontendRealEstate
 
             ApiClientM = new HttpClient();
             HttpResponseMessage response = await ApiClientM.PostAsJsonAsync(
-            "https://realestatewebapinovakbubanja.azurewebsites.net/api/estates", estateToCreate);
+            "https://realestatewebapinb.azurewebsites.net/api/estates", estateToCreate);
             response.EnsureSuccessStatusCode();
 
             typeTextBox.Text = "";
