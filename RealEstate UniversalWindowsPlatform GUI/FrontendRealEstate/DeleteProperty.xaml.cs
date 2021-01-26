@@ -96,7 +96,7 @@ namespace FrontendRealEstate
             ApiClientD = new HttpClient();
 
             HttpResponseMessage response = await ApiClientD.DeleteAsync(
-                $"https://realestatewebapinb.azurewebsites.net/api/estates/{id}");
+                $"https://realestatewebapi.azurewebsites.net/api/estates/{id}");
 
             dataDS.Clear();
             getData();
